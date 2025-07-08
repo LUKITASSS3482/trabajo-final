@@ -1,21 +1,15 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f5f5;
-}
-
+/* Centrar todo el contenido principal */
 .app {
   text-align: center;
   padding: 2rem;
+  max-width: 900px;
+  margin: 0 auto;
 }
 
-h1 {
-  color: #2c3e50;
-  margin-bottom: 2rem;
-}
-
+/* Centrar el formulario de búsqueda */
 .search-bar {
+  display: flex;
+  justify-content: center;
   margin-bottom: 2rem;
 }
 
@@ -24,16 +18,15 @@ h1 {
   font-size: 16px;
   width: 250px;
   border: 1px solid #ccc;
-  border-radius: 8px;
+  border-radius: 8px 0 0 8px;
 }
 
 .search-bar button {
   padding: 10px 20px;
-  margin-left: 10px;
   background-color: #27ae60;
   color: white;
   border: none;
-  border-radius: 8px;
+  border-radius: 0 8px 8px 0;
   cursor: pointer;
   font-size: 16px;
   transition: background-color 0.3s;
@@ -43,6 +36,7 @@ h1 {
   background-color: #219150;
 }
 
+/* Lista de cards centrada con espacio */
 .resource-list {
   display: flex;
   flex-wrap: wrap;
@@ -50,13 +44,14 @@ h1 {
   gap: 1rem;
 }
 
+/* Estilo para las cards */
 .card {
   background-color: white;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   width: 220px;
   padding: 1rem;
-  text-align: center;
+  text-align: center; /* centra texto e imagen */
   transition: transform 0.2s;
 }
 
@@ -64,10 +59,13 @@ h1 {
   transform: scale(1.03);
 }
 
+/* Imagen centrada y tamaño adecuado */
 .card img {
   border-radius: 8px;
   width: 100%;
   height: auto;
+  display: block;
+  margin: 0 auto; /* centra la imagen */
 }
 
 .card h3 {
