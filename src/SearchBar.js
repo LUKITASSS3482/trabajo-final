@@ -5,14 +5,16 @@ function SearchBar({ onSearch }) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    onSearch(input);
+    if (input.trim() !== '') {
+      onSearch(input);
+    }
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} className="search-bar">
       <input
         type="text"
-        placeholder="Buscar personaje"
+        placeholder="Buscar personaje..."
         value={input}
         onChange={(e) => setInput(e.target.value)}
       />

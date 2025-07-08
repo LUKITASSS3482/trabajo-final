@@ -8,7 +8,7 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   useEffect(() => {
-    if (query === '') return;
+    if (query.trim() === '') return;
 
     setLoading(true);
 
@@ -25,8 +25,8 @@ function App() {
   }, [query]);
 
   return (
-    <div>
-      <h1>Buscador de personajes Rick and Morty</h1>
+    <div className="app">
+      <h1>Rick and Morty Finder</h1>
       <SearchBar onSearch={setQuery} />
       {loading ? <p>Cargando...</p> : <ResourceList items={resources} />}
     </div>
@@ -34,4 +34,3 @@ function App() {
 }
 
 export default App;
-
