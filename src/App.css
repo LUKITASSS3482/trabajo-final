@@ -1,11 +1,25 @@
-/* Contenedor principal centrado y con margen */
+/* Fondo con imagen, que cubre toda la pantalla */
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url('c:\Users\lucas\Downloads\rick-y-morty-fanart-2020-6344.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  color: white;
+}
+
+/* Fondo oscuro semi-transparente para mejorar legibilidad */
 .app {
   max-width: 900px;
   margin: 2rem auto;
-  padding: 0 1rem;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 15px;
   text-align: center;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #f5f7fa;
+  box-shadow: 0 0 20px rgba(0,0,0,0.7);
 }
 
 /* Buscador centrado usando flexbox */
@@ -21,14 +35,9 @@
   padding: 10px;
   font-size: 16px;
   width: 250px;
-  border: 1px solid #ccc;
+  border: none;
   border-radius: 8px;
   outline: none;
-  transition: border-color 0.3s;
-}
-
-.search-bar input:focus {
-  border-color: #27ae60;
 }
 
 /* Botón del buscador */
@@ -57,12 +66,13 @@
 
 /* Cards con sombra y borde redondeado */
 .card {
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
   width: 220px;
   padding: 1rem;
   text-align: center;
+  color: #333;
   transition: transform 0.2s;
 }
 
@@ -82,11 +92,11 @@
 /* Título de la card */
 .card h3 {
   margin: 0.5rem 0;
-  color: #34495e;
+  color: #2c3e50;
 }
 
 /* Texto de la card */
 .card p {
   margin: 0.3rem 0;
-  color: #666;
+  color: #555;
 }
