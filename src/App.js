@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import SearchBar from './SearchBar';
 import ResourceList from './ResourceList';
+import './App.css';
 
 function App() {
   const [query, setQuery] = useState('');

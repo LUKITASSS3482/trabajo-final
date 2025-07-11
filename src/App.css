@@ -1,9 +1,9 @@
-/* Fondo con imagen, que cubre toda la pantalla */
+/* Fondo con imagen Rick and Morty portal */
 body, html {
   height: 100%;
   margin: 0;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url('c:\Users\lucas\Downloads\rick-y-morty-fanart-2020-6344.jpg');
+  background-image: url('https://i.ibb.co/4dYtC5B/rick-morty-portal.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -11,52 +11,77 @@ body, html {
   color: white;
 }
 
-/* Fondo oscuro semi-transparente para mejorar legibilidad */
+/* Contenedor principal centrado */
 .app {
-  max-width: 900px;
-  margin: 2rem auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding: 2rem;
   background-color: rgba(0, 0, 0, 0.6);
-  border-radius: 15px;
-  text-align: center;
-  box-shadow: 0 0 20px rgba(0,0,0,0.7);
+  border-radius: 20px;
+  margin: 2rem auto;
+  box-shadow: 0 0 30px rgba(0, 255, 0, 0.4);
 }
 
-/* Buscador centrado usando flexbox */
+/* Título estilizado */
+.app h1 {
+  font-size: 3rem;
+  color: #00ff88;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 8px #000;
+}
+
+/* Buscador estilizado */
 .search-bar {
   display: flex;
   justify-content: center;
-  gap: 10px;
+  align-items: center;
+  gap: 15px;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 15px 25px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 255, 0, 0.4);
   margin-bottom: 2rem;
 }
 
-/* Input del buscador */
 .search-bar input {
-  padding: 10px;
-  font-size: 16px;
-  width: 250px;
-  border: none;
-  border-radius: 8px;
+  padding: 12px 15px;
+  font-size: 18px;
+  width: 280px;
+  border: 2px solid #00ff88;
+  border-radius: 10px;
+  background-color: #111;
+  color: #00ffcc;
   outline: none;
+  transition: 0.3s;
 }
 
-/* Botón del buscador */
+.search-bar input:focus {
+  border-color: #00ffaa;
+  background-color: #222;
+}
+
 .search-bar button {
-  padding: 10px 20px;
-  background-color: #27ae60;
-  color: white;
+  padding: 12px 25px;
+  background: linear-gradient(45deg, #00ff88, #00ffaa);
+  color: #000;
+  font-weight: bold;
   border: none;
-  border-radius: 8px;
+  border-radius: 10px;
   cursor: pointer;
   font-size: 16px;
-  transition: background-color 0.3s;
+  transition: transform 0.2s, box-shadow 0.3s;
+  box-shadow: 0 0 10px #00ff88;
 }
 
 .search-bar button:hover {
-  background-color: #219150;
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #00ffaa;
 }
 
-/* Lista de recursos centrada y con espacio */
+/* Lista de recursos (cards) */
 .resource-list {
   display: flex;
   flex-wrap: wrap;
@@ -64,23 +89,23 @@ body, html {
   gap: 1rem;
 }
 
-/* Cards con sombra y borde redondeado */
+/* Card de personaje */
 .card {
-  background-color: rgba(255, 255, 255, 0.9);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
-  width: 220px;
+  background-color: rgba(0, 0, 0, 0.8);
+  color: #00ffcc;
+  border: 2px solid #00ffaa;
+  border-radius: 15px;
   padding: 1rem;
+  width: 220px;
   text-align: center;
-  color: #333;
-  transition: transform 0.2s;
+  transition: transform 0.3s;
+  box-shadow: 0 0 15px rgba(0, 255, 170, 0.3);
 }
 
 .card:hover {
   transform: scale(1.05);
 }
 
-/* Imagen centrada y responsiva */
 .card img {
   border-radius: 8px;
   width: 100%;
@@ -89,14 +114,12 @@ body, html {
   margin: 0 auto 10px;
 }
 
-/* Título de la card */
 .card h3 {
+  color: #00ff88;
   margin: 0.5rem 0;
-  color: #2c3e50;
 }
 
-/* Texto de la card */
 .card p {
   margin: 0.3rem 0;
-  color: #555;
+  color: #cccccc;
 }

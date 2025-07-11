@@ -11,3 +11,4 @@ function ResourceCard({ resource }) {
 }
 
 export default ResourceCard;
+
